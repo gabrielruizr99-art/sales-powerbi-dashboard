@@ -203,3 +203,58 @@ Design Brief:
 ## Nota de implementación
 
 El visual KPI será un único `cardVisual` moderno con seis proyecciones en el rol `Data`. La jerarquía visual se establece mediante el orden de las medidas, colocando Ventas Netas y Utilidad Total primero. El resaltado dinámico de la categoría líder no se codificará si exige una medida de ranking nueva, ya que el modelo semántico es de solo lectura para esta tarea.
+
+## Extensión aprobada — Análisis de Ventas
+
+```yaml
+Design Brief:
+  generated_by: powerbi-report-design
+  contract_version: "1.1"
+  mode: brownfield
+  composition: Executive Summary + Analytical Drill
+  design_identity:
+    tone: Ejecutivo comercial moderno
+    signature: Cuadrícula modular estricta con bandas KPI compuestas y contenedores blancos consistentes
+    inherited_from: Resumen Ejecutivo
+  pages:
+    - name: Análisis de Ventas
+      role: detail
+      archetype: Analytical Canvas
+      layout_variant: A — Filter-Rail
+      variant_rationale: Cuatro segmentadores y tres comparaciones temporales justifican una exploración densa con filtro lateral.
+      layout_contract:
+        canvas: { width: 1920, height: 1080, margin: 32, gutter: 24, snap: 8 }
+        placements:
+          - { id: header, kind: shape/textbox, x: 0, y: 0, width: 1920, height: 112 }
+          - { id: filter_rail, kind: shape, x: 32, y: 136, width: 280, height: 912 }
+          - { id: commercial_kpis, kind: cardVisual, x: 336, y: 136, width: 1552, height: 160 }
+          - { id: profitability_kpis, kind: cardVisual, x: 336, y: 316, width: 1552, height: 160 }
+          - { id: sales_trend, kind: lineChart, x: 336, y: 496, width: 764, height: 280 }
+          - { id: profit_trend, kind: lineChart, x: 1124, y: 496, width: 764, height: 280 }
+          - { id: growth_trend, kind: lineChart, x: 336, y: 796, width: 1552, height: 252 }
+          - { id: page_navigation, kind: actionButton, x: 56, y: 856, width: 232, height: 136 }
+        filters:
+          - bi_ferreteria dim_fecha[anio]
+          - bi_ferreteria dim_fecha[mes]
+          - bi_ferreteria dim_sucursal[sucursal]
+          - bi_ferreteria dim_canal[canal_venta]
+        color_map:
+          Ventas Netas: "#2563EB"
+          Ventas Año Anterior: "#94A3B8"
+          Variación Ventas: "#F59E0B"
+          Crecimiento Ventas %: "#2563EB"
+          Utilidad Total: "#0F766E"
+          Utilidad Año Anterior: "#94A3B8"
+          Variación Utilidad: "#F59E0B"
+          Crecimiento Utilidad %: "#0F766E"
+        space_audit:
+          content_regions: 6
+          empty_content_pct: 8
+          unplaced_regions: []
+          overlap_expected: false
+          balance_rationale: Dos mitades comparan ventas y utilidad; el crecimiento usa ancho completo para hacer visibles valores positivos y negativos.
+        accessibility:
+          alt_text: required
+          contrast: WCAG_AA_target
+          tab_order: header_filters_kpis_charts_navigation
+```
