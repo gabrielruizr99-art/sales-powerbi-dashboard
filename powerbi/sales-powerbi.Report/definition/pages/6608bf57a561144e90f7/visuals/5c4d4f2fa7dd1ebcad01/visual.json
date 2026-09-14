@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "34114c1651c941727f8d",
+  "name": "5c4d4f2fa7dd1ebcad01",
   "position": {
     "x": 56,
-    "y": 872,
-    "z": 11872,
+    "y": 944,
+    "z": 11944,
     "height": 64,
     "width": 232,
-    "tabOrder": 11872
+    "tabOrder": 11944
   },
   "visual": {
     "visualType": "actionButton",
@@ -236,7 +236,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Análisis de Ventas'"
+                  "Value": "'Productos y Sucursales'"
                 }
               }
             },
@@ -300,7 +300,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Análisis de Ventas'"
+                  "Value": "'Productos y Sucursales'"
                 }
               }
             },
@@ -367,7 +367,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Análisis de Ventas'"
+                  "Value": "'Productos y Sucursales'"
                 }
               }
             },
@@ -434,7 +434,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Análisis de Ventas'"
+                  "Value": "'Productos y Sucursales'"
                 }
               }
             },
@@ -501,7 +501,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Análisis de Ventas'"
+                  "Value": "'Productos y Sucursales'"
                 }
               }
             },
@@ -813,7 +813,7 @@
             "altText": {
               "expr": {
                 "Literal": {
-                  "Value": "'Ir a Análisis de Ventas'"
+                  "Value": "'Ir a Productos y Sucursales'"
                 }
               }
             }
@@ -840,7 +840,7 @@
             "navigationSection": {
               "expr": {
                 "Literal": {
-                  "Value": "'269527ade64ac7a84015'"
+                  "Value": "'6608bf57a561144e90f7'"
                 }
               }
             },
@@ -861,7 +861,7 @@
             "tooltip": {
               "expr": {
                 "Literal": {
-                  "Value": "'Ir a Análisis de Ventas'"
+                  "Value": "'Ir a Productos y Sucursales'"
                 }
               }
             }

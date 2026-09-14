@@ -200,6 +200,73 @@ Design Brief:
     - semantic_model_digest_comparison
 ```
 
+## Extensión aprobada — Productos y Sucursales
+
+```yaml
+Design Brief:
+  generated_by: powerbi-report-design
+  contract_version: "1.2"
+  mode: brownfield
+  approval: approved_by_user_prompt
+  page:
+    name: Productos y Sucursales
+    role: detail
+    archetype: Comparative Benchmark
+    canvas: { width: 1920, height: 1080, margin: 32, gutter: 24, snap: 8 }
+    inherited_identity: Resumen Ejecutivo
+  purpose: Analizar productos, categorías, marcas y sucursales por ventas, utilidad, volumen y margen.
+  layout:
+    - { id: header, kind: shape/textbox, x: 0, y: 0, width: 1920, height: 112 }
+    - { id: filter_rail, kind: shape, x: 32, y: 136, width: 280, height: 912 }
+    - { id: product_kpis, kind: cardVisual, x: 336, y: 136, width: 1552, height: 160 }
+    - { id: top_products, kind: clusteredBarChart, x: 336, y: 320, width: 920, height: 336 }
+    - { id: categories, kind: clusteredBarChart, x: 1280, y: 320, width: 608, height: 336 }
+    - { id: branches, kind: scatterChart, x: 336, y: 680, width: 608, height: 368 }
+    - { id: product_detail, kind: pivotTable, x: 968, y: 680, width: 920, height: 368 }
+  filters:
+    - bi_ferreteria dim_producto[categoria]
+    - bi_ferreteria dim_producto[subcategoria]
+    - bi_ferreteria dim_producto[marca]
+    - bi_ferreteria dim_sucursal[sucursal]
+  indicators:
+    - Ventas Netas
+    - Utilidad Total
+    - Unidades Vendidas
+    - Margen %
+    - Costo Total
+    - Descuento Total
+  chart_contracts:
+    top_products:
+      roles: { Category: producto, Y: [Ventas Netas, Utilidad Total] }
+      filter: Top 10 por Ventas Netas
+      sort: Ventas Netas descendente
+    categories:
+      roles: { Category: categoria, Y: [Ventas Netas, Utilidad Total] }
+      sort: Ventas Netas descendente
+    branches:
+      type: scatterChart
+      roles: { Category: sucursal, X: Ventas Netas, Y: Margen % }
+      rationale: Ejes independientes con unidades explícitas evitan una comparación engañosa entre moneda y porcentaje.
+    product_detail:
+      type: pivotTable
+      rows: [categoria, subcategoria, producto]
+      values: [Ventas Netas, Unidades Vendidas, Utilidad Total, Margen %]
+      conditional_formatting: Barras de datos azules en Ventas Netas, conservando el texto.
+  navigation:
+    pages: [Resumen Ejecutivo, Análisis de Ventas, Productos y Sucursales]
+    active_page_highlight: true
+  accessibility:
+    contrast: WCAG_AA_target
+    alt_text: required
+    color_not_sole_encoding: true
+  implementation_constraints:
+    semantic_model_changes: forbidden
+    definition_pbir_changes: forbidden
+    custom_visuals: forbidden
+    deprecated_visuals: forbidden
+    preserve_existing_schemas: true
+```
+
 ## Nota de implementación
 
 El visual KPI será un único `cardVisual` moderno con seis proyecciones en el rol `Data`. La jerarquía visual se establece mediante el orden de las medidas, colocando Ventas Netas y Utilidad Total primero. El resaltado dinámico de la categoría líder no se codificará si exige una medida de ranking nueva, ya que el modelo semántico es de solo lectura para esta tarea.

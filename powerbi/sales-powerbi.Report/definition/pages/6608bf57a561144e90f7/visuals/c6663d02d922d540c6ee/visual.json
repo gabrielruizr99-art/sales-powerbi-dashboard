@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "0a79ae10b1d66e760da3",
+  "name": "c6663d02d922d540c6ee",
   "position": {
-    "x": 56,
-    "y": 756,
-    "z": 10000,
-    "height": 32,
-    "width": 232,
-    "tabOrder": 10000
+    "x": 32,
+    "y": 66,
+    "z": 3000,
+    "height": 26,
+    "width": 1120,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,11 +19,11 @@
               {
                 "textRuns": [
                   {
-                    "value": "Navegación",
+                    "value": "Ferretería | Desempeño por producto, categoría y sucursal",
                     "textStyle": {
-                      "fontFamily": "Segoe UI Semibold",
-                      "fontSize": "20px",
-                      "color": "#1F2937"
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "16px",
+                      "color": "#D9E2F0"
                     }
                   }
                 ],

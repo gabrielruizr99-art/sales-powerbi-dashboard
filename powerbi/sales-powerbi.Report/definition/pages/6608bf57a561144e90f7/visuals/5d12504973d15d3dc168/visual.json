@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "0a79ae10b1d66e760da3",
+  "name": "5d12504973d15d3dc168",
   "position": {
     "x": 56,
-    "y": 756,
-    "z": 10000,
+    "y": 164,
+    "z": 5000,
     "height": 32,
     "width": 232,
-    "tabOrder": 10000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Navegación",
+                    "value": "Filtros",
                     "textStyle": {
                       "fontFamily": "Segoe UI Semibold",
                       "fontSize": "20px",

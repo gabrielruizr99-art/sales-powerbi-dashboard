@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "0a79ae10b1d66e760da3",
+  "name": "9b7d748c111cffbcffb1",
   "position": {
-    "x": 56,
-    "y": 756,
-    "z": 10000,
-    "height": 32,
-    "width": 232,
-    "tabOrder": 10000
+    "x": 32,
+    "y": 16,
+    "z": 2000,
+    "height": 48,
+    "width": 880,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,11 +19,11 @@
               {
                 "textRuns": [
                   {
-                    "value": "Navegación",
+                    "value": "Productos y Sucursales",
                     "textStyle": {
                       "fontFamily": "Segoe UI Semibold",
-                      "fontSize": "20px",
-                      "color": "#1F2937"
+                      "fontSize": "30px",
+                      "color": "#FFFFFF"
                     }
                   }
                 ],

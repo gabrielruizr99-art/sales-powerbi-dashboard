@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "34114c1651c941727f8d",
+  "name": "e5b347f9fc77d008bac3",
   "position": {
     "x": 56,
-    "y": 872,
-    "z": 11872,
+    "y": 800,
+    "z": 11800,
     "height": 64,
     "width": 232,
-    "tabOrder": 11872
+    "tabOrder": 11800
   },
   "visual": {
     "visualType": "actionButton",
@@ -47,7 +47,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#2563EB'"
+                      "Value": "'#FFFFFF'"
                     }
                   }
                 }
@@ -76,7 +76,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#2563EB'"
+                      "Value": "'#FFFFFF'"
                     }
                   }
                 }
@@ -108,7 +108,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#1D4ED8'"
+                      "Value": "'#E8EEF8'"
                     }
                   }
                 }
@@ -140,7 +140,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#2563EB'"
+                      "Value": "'#FFFFFF'"
                     }
                   }
                 }
@@ -218,7 +218,7 @@
             "bold": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -227,7 +227,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FFFFFF'"
+                      "Value": "'#1F2937'"
                     }
                   }
                 }
@@ -236,7 +236,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Análisis de Ventas'"
+                  "Value": "'Resumen Ejecutivo'"
                 }
               }
             },
@@ -282,7 +282,7 @@
             "bold": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -291,7 +291,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FFFFFF'"
+                      "Value": "'#1F2937'"
                     }
                   }
                 }
@@ -300,7 +300,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Análisis de Ventas'"
+                  "Value": "'Resumen Ejecutivo'"
                 }
               }
             },
@@ -358,7 +358,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FFFFFF'"
+                      "Value": "'#17324D'"
                     }
                   }
                 }
@@ -367,7 +367,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Análisis de Ventas'"
+                  "Value": "'Resumen Ejecutivo'"
                 }
               }
             },
@@ -416,7 +416,7 @@
             "bold": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -425,7 +425,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FFFFFF'"
+                      "Value": "'#1F2937'"
                     }
                   }
                 }
@@ -434,7 +434,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Análisis de Ventas'"
+                  "Value": "'Resumen Ejecutivo'"
                 }
               }
             },
@@ -483,7 +483,7 @@
             "bold": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -501,7 +501,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Análisis de Ventas'"
+                  "Value": "'Resumen Ejecutivo'"
                 }
               }
             },
@@ -540,7 +540,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#2563EB'"
+                      "Value": "'#E2E8F0'"
                     }
                   }
                 }
@@ -576,7 +576,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#2563EB'"
+                      "Value": "'#E2E8F0'"
                     }
                   }
                 }
@@ -615,7 +615,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#2563EB'"
+                      "Value": "'#E2E8F0'"
                     }
                   }
                 }
@@ -654,7 +654,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#2563EB'"
+                      "Value": "'#E2E8F0'"
                     }
                   }
                 }
@@ -693,7 +693,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#2563EB'"
+                      "Value": "'#E2E8F0'"
                     }
                   }
                 }
@@ -813,7 +813,7 @@
             "altText": {
               "expr": {
                 "Literal": {
-                  "Value": "'Ir a Análisis de Ventas'"
+                  "Value": "'Ir a Resumen Ejecutivo'"
                 }
               }
             }
@@ -840,7 +840,7 @@
             "navigationSection": {
               "expr": {
                 "Literal": {
-                  "Value": "'269527ade64ac7a84015'"
+                  "Value": "'e0a0e56f982e2301aa18'"
                 }
               }
             },
@@ -861,7 +861,7 @@
             "tooltip": {
               "expr": {
                 "Literal": {
-                  "Value": "'Ir a Análisis de Ventas'"
+                  "Value": "'Ir a Resumen Ejecutivo'"
                 }
               }
             }
