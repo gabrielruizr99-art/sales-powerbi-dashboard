@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Environment files
+.env
+**/.env
+**/.env.*
+!**/.env.example
+**/auth.json
+**/credentials*.json
+**/secrets*.json
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Generated files
+data/processed/*.csv
+reports/*.json
+
+# Power BI temporary files
+powerbi/~$*.pbix
+powerbi/**/.pbi/
+powerbi/**/*.pbix.autorecover
+
+# Local recovery artifacts
+.recovery/
+
+
+# APM dependencies
+apm_modules/

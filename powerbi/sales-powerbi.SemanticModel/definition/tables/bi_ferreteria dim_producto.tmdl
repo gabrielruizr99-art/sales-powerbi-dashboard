@@ -1,0 +1,57 @@
+table 'bi_ferreteria dim_producto'
+	lineageTag: f824b67a-e475-415c-bb1d-62b96186bcc6
+
+	column producto_id
+		dataType: string
+		isHidden
+		lineageTag: 0d99e6ef-c143-49c4-a937-10d603e7c79c
+		summarizeBy: none
+		sourceColumn: producto_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column producto
+		dataType: string
+		lineageTag: e4831b34-cbf8-432f-ae7e-06e281eaeff3
+		summarizeBy: none
+		sourceColumn: producto
+
+		annotation SummarizationSetBy = Automatic
+
+	column categoria
+		dataType: string
+		lineageTag: b76a9208-6949-4921-9709-159f5c819f22
+		summarizeBy: none
+		sourceColumn: categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column subcategoria
+		dataType: string
+		lineageTag: 958a1cbb-e152-404c-8ab9-907199deb17e
+		summarizeBy: none
+		sourceColumn: subcategoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column marca
+		dataType: string
+		lineageTag: 6db2c668-fea1-4db5-a527-96b647a9af6e
+		summarizeBy: none
+		sourceColumn: marca
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'bi_ferreteria dim_producto' = m
+		mode: import
+		source =
+				let
+				  Origen = PostgreSQL.Database("localhost:5432", "sales_powerbi"),
+				  #"Navegación 1" = Origen{[Schema = "bi_ferreteria", Item = "dim_producto"]}[Data]
+				in
+				  #"Navegación 1"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

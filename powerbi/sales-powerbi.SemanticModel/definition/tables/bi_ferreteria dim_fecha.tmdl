@@ -1,0 +1,93 @@
+table 'bi_ferreteria dim_fecha'
+	lineageTag: 624e24e0-9de9-4cc2-9416-cb8a68e471e7
+	dataCategory: Time
+
+	column fecha_key
+		dataType: dateTime
+		isUnique
+		formatString: dd/MM/yyyy
+		lineageTag: a5a8d58c-da99-4b7c-b139-ff80638839b0
+		summarizeBy: none
+		sourceColumn: fecha_key
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column anio
+		dataType: int64
+		formatString: 0
+		lineageTag: d3d10c6c-df12-43c5-9b18-4b10a8d42f1d
+		summarizeBy: none
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes_numero
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d1655df4-9168-4b48-aa7d-ea1457276785
+		summarizeBy: none
+		sourceColumn: mes_numero
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: string
+		lineageTag: 54829d9c-f489-4481-9c4a-ddf629cc2aa3
+		summarizeBy: none
+		sourceColumn: mes
+		sortByColumn: mes_numero
+
+		annotation SummarizationSetBy = Automatic
+
+	column trimestre
+		dataType: string
+		lineageTag: 489e17fc-de01-49b8-b758-9f534bf92134
+		summarizeBy: none
+		sourceColumn: trimestre
+
+		annotation SummarizationSetBy = Automatic
+
+	column dia_semana
+		dataType: string
+		lineageTag: ce28d70f-e52a-4763-87ee-6142508bf01f
+		summarizeBy: none
+		sourceColumn: dia_semana
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy Calendario
+		lineageTag: 29e22d88-1a85-4417-8f8e-988bf5b0c4f5
+
+		level anio
+			lineageTag: 28c6a48d-e9e9-4666-8bd4-bad0bd0a8d16
+			column: anio
+
+		level trimestre
+			lineageTag: 593412d9-b97e-4b7b-8ad5-b5a370acb180
+			column: trimestre
+
+		level mes
+			lineageTag: d03beea1-b294-4b79-ab9b-4594fb97a18d
+			column: mes
+
+		level fecha_key
+			lineageTag: e01854c4-6365-4909-88c2-c446134b66f6
+			column: fecha_key
+
+	partition 'bi_ferreteria dim_fecha' = m
+		mode: import
+		source =
+				let
+				  Origen = PostgreSQL.Database("localhost:5432", "sales_powerbi"),
+				  #"Navegación 1" = Origen{[Schema = "bi_ferreteria", Item = "dim_fecha"]}[Data],
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Navegación 1",{{"fecha_key", type date}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,113 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 50.01908880483262,
+            "y": 55.031215888356428
+          },
+          "nodeIndex": "bi_ferreteria dim_canal",
+          "nodeLineageTag": "d0a5e746-09da-4a21-a740-5594b8433073",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 780.07492379493942,
+            "y": 334.02833183552912
+          },
+          "nodeIndex": "bi_ferreteria dim_cliente",
+          "nodeLineageTag": "4b66138a-572f-4a29-a4cd-287a8fe558f8",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 857.44407582080157,
+            "y": 0
+          },
+          "nodeIndex": "bi_ferreteria dim_fecha",
+          "nodeLineageTag": "624e24e0-9de9-4cc2-9416-cb8a68e471e7",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 388.90604829480134,
+            "y": 0
+          },
+          "nodeIndex": "bi_ferreteria dim_producto",
+          "nodeLineageTag": "f824b67a-e475-415c-bb1d-62b96186bcc6",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 370.75846116324419,
+            "y": 639.676979644671
+          },
+          "nodeIndex": "bi_ferreteria dim_sucursal",
+          "nodeLineageTag": "507bc23a-a51c-40d7-b130-9784af1b33ae",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 41,
+            "y": 468.09341165364111
+          },
+          "nodeIndex": "bi_ferreteria dim_vendedor",
+          "nodeLineageTag": "149fbe46-b7f2-4d04-887d-43c5dc1b2357",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 379.65916537956048,
+            "y": 264.90495387100134
+          },
+          "nodeIndex": "bi_ferreteria fact_ventas",
+          "nodeLineageTag": "ca48ecb0-6cac-4164-93df-a639dad25203",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 6
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 89.192590520569482,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

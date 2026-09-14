@@ -1,0 +1,587 @@
+lockfile_version: '1'
+apm_version: 0.30.0
+dependencies:
+- repo_url: microsoft/skills-for-fabric
+  name: skills-for-fabric
+  host: github.com
+  resolved_commit: 24cc0d296e5e8523cc6a92e1342bc1791d7deb85
+  version: 0.3.16
+  package_type: skill_bundle
+  deployed_files:
+  - .agents/skills/powerbi-report-authoring
+  - .agents/skills/powerbi-report-authoring/SKILL.md
+  - .agents/skills/powerbi-report-authoring/apm.yml
+  - .agents/skills/powerbi-report-authoring/references/authoring.md
+  - .agents/skills/powerbi-report-authoring/references/card.md
+  - .agents/skills/powerbi-report-authoring/references/cartesian.md
+  - .agents/skills/powerbi-report-authoring/references/color-strategy.md
+  - .agents/skills/powerbi-report-authoring/references/conditional-formatting.md
+  - .agents/skills/powerbi-report-authoring/references/expressions.md
+  - .agents/skills/powerbi-report-authoring/references/filter-pane.md
+  - .agents/skills/powerbi-report-authoring/references/filters.md
+  - .agents/skills/powerbi-report-authoring/references/formatting-overview.md
+  - .agents/skills/powerbi-report-authoring/references/formatting.md
+  - .agents/skills/powerbi-report-authoring/references/image.md
+  - .agents/skills/powerbi-report-authoring/references/map.md
+  - .agents/skills/powerbi-report-authoring/references/page-formatting.md
+  - .agents/skills/powerbi-report-authoring/references/powerbi-desktop.md
+  - .agents/skills/powerbi-report-authoring/references/powerbi-report-author-cli.md
+  - .agents/skills/powerbi-report-authoring/references/re-theming.md
+  - .agents/skills/powerbi-report-authoring/references/screenshot-review.md
+  - .agents/skills/powerbi-report-authoring/references/shape.md
+  - .agents/skills/powerbi-report-authoring/references/slicers.md
+  - .agents/skills/powerbi-report-authoring/references/table.md
+  - .agents/skills/powerbi-report-authoring/references/textbox.md
+  - .agents/skills/powerbi-report-authoring/references/theming.md
+  - .agents/skills/powerbi-report-authoring/references/version-control.md
+  - .agents/skills/powerbi-report-design
+  - .agents/skills/powerbi-report-design/SKILL.md
+  - .agents/skills/powerbi-report-design/apm.yml
+  - .agents/skills/powerbi-report-design/assets/base.json
+  - .agents/skills/powerbi-report-design/references/accessibility.md
+  - .agents/skills/powerbi-report-design/references/anti-patterns.md
+  - .agents/skills/powerbi-report-design/references/archetype-composition.md
+  - .agents/skills/powerbi-report-design/references/archetypes/analytical-canvas.md
+  - .agents/skills/powerbi-report-design/references/archetypes/comparative-benchmark.md
+  - .agents/skills/powerbi-report-design/references/archetypes/executive-summary.md
+  - .agents/skills/powerbi-report-design/references/archetypes/narrative-story.md
+  - .agents/skills/powerbi-report-design/references/archetypes/operational-monitor.md
+  - .agents/skills/powerbi-report-design/references/brownfield.md
+  - .agents/skills/powerbi-report-design/references/chart-selection.md
+  - .agents/skills/powerbi-report-design/references/color.md
+  - .agents/skills/powerbi-report-design/references/design-brief.md
+  - .agents/skills/powerbi-report-design/references/interactivity.md
+  - .agents/skills/powerbi-report-design/references/layout.md
+  - .agents/skills/powerbi-report-design/references/pre-flight-checklist.md
+  - .agents/skills/powerbi-report-design/references/signatures.md
+  - .agents/skills/powerbi-report-design/references/tone-catalog.md
+  - .agents/skills/powerbi-report-design/references/typography.md
+  - .agents/skills/powerbi-report-design/references/visual-cookbook.md
+  - .agents/skills/powerbi-report-planning
+  - .agents/skills/powerbi-report-planning/SKILL.md
+  - .agents/skills/powerbi-report-planning/apm.yml
+  deployed_file_hashes:
+    .agents/skills/powerbi-report-authoring/SKILL.md: sha256:8a50310094ac0e09822458bfb9de43a586c6adf9f2ecfcd2be99bd786ea4998f
+    .agents/skills/powerbi-report-authoring/apm.yml: sha256:bfc3cb23e6e4def81f41acafbef54ac4f048390921b591e9fe7f58fe5b0967a2
+    .agents/skills/powerbi-report-authoring/references/authoring.md: sha256:3cb76d98b2cc0f579289088906e598b13d5641acd6391bdfb6c31fa61266b55b
+    .agents/skills/powerbi-report-authoring/references/card.md: sha256:6d2bdf885eea31b614149210b3c654e94eaef0eecc96d2da8bb4ff63c317c1df
+    .agents/skills/powerbi-report-authoring/references/cartesian.md: sha256:c96b2329137dcf6d7550ab4d46d06e6511dba8d83ff7c0c84e878451f0f19501
+    .agents/skills/powerbi-report-authoring/references/color-strategy.md: sha256:5bca881aeea6dbd13fd3e9d06a0d4d50a22ae53c0c2cb3733628e08148801e56
+    .agents/skills/powerbi-report-authoring/references/conditional-formatting.md: sha256:465632d358e93e12846e857f4b2843e7998f2ef00d3e7c2884ede74f656051dc
+    .agents/skills/powerbi-report-authoring/references/expressions.md: sha256:25eb4e30bc631b5c0644e975d17903dd2c23099e70153967e30a24d0448a0e22
+    .agents/skills/powerbi-report-authoring/references/filter-pane.md: sha256:fc4a60f3a881daf74e611b5ab3ce656e9a05a1edf32df6b219d0974928b3f05e
+    .agents/skills/powerbi-report-authoring/references/filters.md: sha256:2b84e6d4065112857584800fedb38b77547e05ae55090dd6b1fb714041f1a53f
+    .agents/skills/powerbi-report-authoring/references/formatting-overview.md: sha256:56a729e42b95e0432f2b1249fdb0d38bab25424508f84f1fb89588a61d2b1244
+    .agents/skills/powerbi-report-authoring/references/formatting.md: sha256:7d6d3e882cd78b666719f25b57dafe85bf09fc1c1e5fabe30579106da1dbc04f
+    .agents/skills/powerbi-report-authoring/references/image.md: sha256:4ca4e7804191ae801ee28f846d58a9590fc26858d12a143f669c4507a92b6ce3
+    .agents/skills/powerbi-report-authoring/references/map.md: sha256:6a4c56e052dd2c4f1b6d83e19b8d588cb9c7f068342f1e46c4297a35f2bc23da
+    .agents/skills/powerbi-report-authoring/references/page-formatting.md: sha256:341c9843339d7c5f7c54c184fd0ca4bd901916a11b1bc68c18964613f2692b65
+    .agents/skills/powerbi-report-authoring/references/powerbi-desktop.md: sha256:5dcbfb7400b1a4937e5450c8c49e15008124d1c32d74e33c97831b09d837f6c6
+    .agents/skills/powerbi-report-authoring/references/powerbi-report-author-cli.md: sha256:e891e970bf7b391d455be22078829a03877f080d0b253ee988f3760ad43b0146
+    .agents/skills/powerbi-report-authoring/references/re-theming.md: sha256:c8c2b522ca067ea2010670cf8f0ca10698a6b562dd4377c9937023db5930a4fa
+    .agents/skills/powerbi-report-authoring/references/screenshot-review.md: sha256:52d71403947cb7e99f729c9409cace22191d04c030ff649ae4e94d2bc837c418
+    .agents/skills/powerbi-report-authoring/references/shape.md: sha256:f44321da79093285cb3c3b3193abd9c703d415194dd67cea4edfad335a0a65c5
+    .agents/skills/powerbi-report-authoring/references/slicers.md: sha256:b761af7a4a092566c339c8f539a174adf7978b923d9112183f184f4319975de1
+    .agents/skills/powerbi-report-authoring/references/table.md: sha256:cc3d7b329dffec330bf8b2da0b5d10541d2e7e9b151174baa9e3ea9ccadcd5e9
+    .agents/skills/powerbi-report-authoring/references/textbox.md: sha256:3961ecad46ffde382499ec2dc6ab038ecf07c5c69987f3ada93a598602fcf9b9
+    .agents/skills/powerbi-report-authoring/references/theming.md: sha256:3574de30a77bcf923b18c2f64b979984032fec527a262b5b91c2648e6b73f6ed
+    .agents/skills/powerbi-report-authoring/references/version-control.md: sha256:7da4a617b152a2cf4b533b177d37e1435cd6655e6a1622f5ed689ab3131a0248
+    .agents/skills/powerbi-report-design/SKILL.md: sha256:038d10f6b6f691f381f64cee44e321524033f16c618c57a2d57110d070bbbdc4
+    .agents/skills/powerbi-report-design/apm.yml: sha256:1cadeef9cb0648ee5bd3160042db30790c0fda85252cd1fc3494d77acbc215a9
+    .agents/skills/powerbi-report-design/assets/base.json: sha256:fd2408d47741419157d699b819a049f692398174bbd9ab95173cb765c2076c0a
+    .agents/skills/powerbi-report-design/references/accessibility.md: sha256:93ca5305f8d8746d4de99bc7236e5d137a4d7f5ac63a4e2e973a181db43537d4
+    .agents/skills/powerbi-report-design/references/anti-patterns.md: sha256:4624cb78c5d59a66d6f50dda710c2f667f5b0164f39d0482e3d665aa361810eb
+    .agents/skills/powerbi-report-design/references/archetype-composition.md: sha256:2e706249acb0e3678f400e2c22f988d01dfd509aad394d0b4c8fc3c59df2bf62
+    .agents/skills/powerbi-report-design/references/archetypes/analytical-canvas.md: sha256:383fbb7b74c5fda9e507b94c29673e69275e4bb373be52b08f014118f275553e
+    .agents/skills/powerbi-report-design/references/archetypes/comparative-benchmark.md: sha256:72c275ea1ffba334f4c6cbcc009de8fc02ad8c87ec3a7ad432d2a11b0460ba38
+    .agents/skills/powerbi-report-design/references/archetypes/executive-summary.md: sha256:ac267b8691312a66ced7c058450d38cf5b350c9fbd879cb3f44a4c9660fc7bd6
+    .agents/skills/powerbi-report-design/references/archetypes/narrative-story.md: sha256:c49d4fc4bcf8f75a777a838e80886c13d20e76867788687130dcf93237e21246
+    .agents/skills/powerbi-report-design/references/archetypes/operational-monitor.md: sha256:86603fc4bc4982139ed5aed3d1ca1dbc430bc54a5fbaa20fdc0ce1dc68baa24e
+    .agents/skills/powerbi-report-design/references/brownfield.md: sha256:ae8b3d49f864871e9acb4eee6b9456eb0feb2d51b73b7b1c794629acebcfbfb3
+    .agents/skills/powerbi-report-design/references/chart-selection.md: sha256:a374bc637d94a7dc23ce5c914e3243dbd7a02a196e8851df9bc3d27df6a30bb0
+    .agents/skills/powerbi-report-design/references/color.md: sha256:c7ee2bf0f2d8a50db4b4c8f8d09ac220241d4f30cae6b878d193f112fb4c2748
+    .agents/skills/powerbi-report-design/references/design-brief.md: sha256:406182954d5e5e03bb83e0a8353ae5176d4f30a02a95bcd0e2eef98cde9e689c
+    .agents/skills/powerbi-report-design/references/interactivity.md: sha256:dd627c50a0bc904084dc7ea2137a6e7748a3351c72a041a44204d2c2cfc2a248
+    .agents/skills/powerbi-report-design/references/layout.md: sha256:5a250bd0e3be42436787d23e107900ebf058d95709df7d9694db345448ad1d66
+    .agents/skills/powerbi-report-design/references/pre-flight-checklist.md: sha256:f5b8ff3c1a97b3ba90effe9fd409d0a87b52e7d481c968bfc9f46e9094509394
+    .agents/skills/powerbi-report-design/references/signatures.md: sha256:79feedb3d465d577a82b3c1c254d0328a16ef59d28a0dda4ff6ec249f043b75d
+    .agents/skills/powerbi-report-design/references/tone-catalog.md: sha256:c3e85224eac790af855047ba68bb6b278afe3941acc8ceb54088ddfdb3e4f7d5
+    .agents/skills/powerbi-report-design/references/typography.md: sha256:916e262bdea68130450180900b47424a5fb2dd0f5570d37b0b541c47e2861c8d
+    .agents/skills/powerbi-report-design/references/visual-cookbook.md: sha256:93604e45fb1ff91eee9d826242dba0df962d538104e34cdf45c24cd577fd62c4
+    .agents/skills/powerbi-report-planning/SKILL.md: sha256:8ad6ecfe951284b3c9d14060a81da1ba2ac3ee93ceebb43c12b2fc17d0120b57
+    .agents/skills/powerbi-report-planning/apm.yml: sha256:953e9b2e77bd4068afbcc316e40ac876b311722f2e23512eade219be7e045a31
+  content_hash: sha256:9c5c3a41f7751f9ef90a904f16538d82836758bda47ab40888a344054a99799c
+  skill_subset:
+  - powerbi-report-authoring
+  - powerbi-report-design
+  - powerbi-report-planning
+  declared_license: MIT
+deployments:
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-authoring
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-authoring/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:8a50310094ac0e09822458bfb9de43a586c6adf9f2ecfcd2be99bd786ea4998f
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-authoring/apm.yml
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:bfc3cb23e6e4def81f41acafbef54ac4f048390921b591e9fe7f58fe5b0967a2
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-authoring/references/authoring.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:3cb76d98b2cc0f579289088906e598b13d5641acd6391bdfb6c31fa61266b55b
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-authoring/references/card.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:6d2bdf885eea31b614149210b3c654e94eaef0eecc96d2da8bb4ff63c317c1df
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-authoring/references/cartesian.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:c96b2329137dcf6d7550ab4d46d06e6511dba8d83ff7c0c84e878451f0f19501
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-authoring/references/color-strategy.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:5bca881aeea6dbd13fd3e9d06a0d4d50a22ae53c0c2cb3733628e08148801e56
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-authoring/references/conditional-formatting.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:465632d358e93e12846e857f4b2843e7998f2ef00d3e7c2884ede74f656051dc
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-authoring/references/expressions.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:25eb4e30bc631b5c0644e975d17903dd2c23099e70153967e30a24d0448a0e22
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-authoring/references/filter-pane.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:fc4a60f3a881daf74e611b5ab3ce656e9a05a1edf32df6b219d0974928b3f05e
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-authoring/references/filters.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:2b84e6d4065112857584800fedb38b77547e05ae55090dd6b1fb714041f1a53f
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-authoring/references/formatting-overview.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:56a729e42b95e0432f2b1249fdb0d38bab25424508f84f1fb89588a61d2b1244
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-authoring/references/formatting.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:7d6d3e882cd78b666719f25b57dafe85bf09fc1c1e5fabe30579106da1dbc04f
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-authoring/references/image.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:4ca4e7804191ae801ee28f846d58a9590fc26858d12a143f669c4507a92b6ce3
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-authoring/references/map.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:6a4c56e052dd2c4f1b6d83e19b8d588cb9c7f068342f1e46c4297a35f2bc23da
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-authoring/references/page-formatting.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:341c9843339d7c5f7c54c184fd0ca4bd901916a11b1bc68c18964613f2692b65
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-authoring/references/powerbi-desktop.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:5dcbfb7400b1a4937e5450c8c49e15008124d1c32d74e33c97831b09d837f6c6
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-authoring/references/powerbi-report-author-cli.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:e891e970bf7b391d455be22078829a03877f080d0b253ee988f3760ad43b0146
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-authoring/references/re-theming.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:c8c2b522ca067ea2010670cf8f0ca10698a6b562dd4377c9937023db5930a4fa
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-authoring/references/screenshot-review.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:52d71403947cb7e99f729c9409cace22191d04c030ff649ae4e94d2bc837c418
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-authoring/references/shape.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:f44321da79093285cb3c3b3193abd9c703d415194dd67cea4edfad335a0a65c5
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-authoring/references/slicers.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:b761af7a4a092566c339c8f539a174adf7978b923d9112183f184f4319975de1
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-authoring/references/table.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:cc3d7b329dffec330bf8b2da0b5d10541d2e7e9b151174baa9e3ea9ccadcd5e9
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-authoring/references/textbox.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:3961ecad46ffde382499ec2dc6ab038ecf07c5c69987f3ada93a598602fcf9b9
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-authoring/references/theming.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:3574de30a77bcf923b18c2f64b979984032fec527a262b5b91c2648e6b73f6ed
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-authoring/references/version-control.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:7da4a617b152a2cf4b533b177d37e1435cd6655e6a1622f5ed689ab3131a0248
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-design
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-design/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:038d10f6b6f691f381f64cee44e321524033f16c618c57a2d57110d070bbbdc4
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-design/apm.yml
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:1cadeef9cb0648ee5bd3160042db30790c0fda85252cd1fc3494d77acbc215a9
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-design/assets/base.json
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:fd2408d47741419157d699b819a049f692398174bbd9ab95173cb765c2076c0a
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-design/references/accessibility.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:93ca5305f8d8746d4de99bc7236e5d137a4d7f5ac63a4e2e973a181db43537d4
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-design/references/anti-patterns.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:4624cb78c5d59a66d6f50dda710c2f667f5b0164f39d0482e3d665aa361810eb
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-design/references/archetype-composition.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:2e706249acb0e3678f400e2c22f988d01dfd509aad394d0b4c8fc3c59df2bf62
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-design/references/archetypes/analytical-canvas.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:383fbb7b74c5fda9e507b94c29673e69275e4bb373be52b08f014118f275553e
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-design/references/archetypes/comparative-benchmark.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:72c275ea1ffba334f4c6cbcc009de8fc02ad8c87ec3a7ad432d2a11b0460ba38
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-design/references/archetypes/executive-summary.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:ac267b8691312a66ced7c058450d38cf5b350c9fbd879cb3f44a4c9660fc7bd6
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-design/references/archetypes/narrative-story.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:c49d4fc4bcf8f75a777a838e80886c13d20e76867788687130dcf93237e21246
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-design/references/archetypes/operational-monitor.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:86603fc4bc4982139ed5aed3d1ca1dbc430bc54a5fbaa20fdc0ce1dc68baa24e
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-design/references/brownfield.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:ae8b3d49f864871e9acb4eee6b9456eb0feb2d51b73b7b1c794629acebcfbfb3
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-design/references/chart-selection.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:a374bc637d94a7dc23ce5c914e3243dbd7a02a196e8851df9bc3d27df6a30bb0
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-design/references/color.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:c7ee2bf0f2d8a50db4b4c8f8d09ac220241d4f30cae6b878d193f112fb4c2748
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-design/references/design-brief.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:406182954d5e5e03bb83e0a8353ae5176d4f30a02a95bcd0e2eef98cde9e689c
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-design/references/interactivity.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:dd627c50a0bc904084dc7ea2137a6e7748a3351c72a041a44204d2c2cfc2a248
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-design/references/layout.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:5a250bd0e3be42436787d23e107900ebf058d95709df7d9694db345448ad1d66
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-design/references/pre-flight-checklist.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:f5b8ff3c1a97b3ba90effe9fd409d0a87b52e7d481c968bfc9f46e9094509394
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-design/references/signatures.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:79feedb3d465d577a82b3c1c254d0328a16ef59d28a0dda4ff6ec249f043b75d
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-design/references/tone-catalog.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:c3e85224eac790af855047ba68bb6b278afe3941acc8ceb54088ddfdb3e4f7d5
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-design/references/typography.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:916e262bdea68130450180900b47424a5fb2dd0f5570d37b0b541c47e2861c8d
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-design/references/visual-cookbook.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:93604e45fb1ff91eee9d826242dba0df962d538104e34cdf45c24cd577fd62c4
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-planning
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-planning/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:8ad6ecfe951284b3c9d14060a81da1ba2ac3ee93ceebb43c12b2fc17d0120b57
+- kind: project-relative
+  target: codex
+  value: .agents/skills/powerbi-report-planning/apm.yml
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/skills-for-fabric
+  active_owner: microsoft/skills-for-fabric
+  content_hash: sha256:953e9b2e77bd4068afbcc316e40ac876b311722f2e23512eade219be7e045a31

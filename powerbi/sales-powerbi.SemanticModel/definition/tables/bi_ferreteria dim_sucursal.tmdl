@@ -1,0 +1,39 @@
+table 'bi_ferreteria dim_sucursal'
+	lineageTag: 507bc23a-a51c-40d7-b130-9784af1b33ae
+
+	column sucursal_id
+		dataType: string
+		isHidden
+		lineageTag: a2a30176-e4d5-4613-89ad-eea7d5fee9d7
+		summarizeBy: none
+		sourceColumn: sucursal_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column sucursal
+		dataType: string
+		lineageTag: d6cf91c5-3e05-42fd-ae42-a5f19cb1802b
+		summarizeBy: none
+		sourceColumn: sucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column ciudad
+		dataType: string
+		lineageTag: 45e6b183-9d35-43bd-aee0-89a1c179258e
+		summarizeBy: none
+		sourceColumn: ciudad
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'bi_ferreteria dim_sucursal' = m
+		mode: import
+		source =
+				let
+				  Origen = PostgreSQL.Database("localhost:5432", "sales_powerbi"),
+				  #"Navegación 1" = Origen{[Schema = "bi_ferreteria", Item = "dim_sucursal"]}[Data]
+				in
+				  #"Navegación 1"
+
+	annotation PBI_ResultType = Table
+

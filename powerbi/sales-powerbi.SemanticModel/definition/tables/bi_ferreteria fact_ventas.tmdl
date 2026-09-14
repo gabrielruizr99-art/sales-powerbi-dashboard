@@ -1,0 +1,335 @@
+table 'bi_ferreteria fact_ventas'
+	lineageTag: ca48ecb0-6cac-4164-93df-a639dad25203
+
+	/// Importe neto total de las ventas después de descuentos.
+	measure 'Ventas Netas' = SUM('bi_ferreteria fact_ventas'[venta_neta])
+		formatString: S/ #,##0.00
+		displayFolder: 01 Indicadores base
+		lineageTag: 988848b5-cfd3-486b-87cb-fe629cad2888
+
+	/// Importe total de ventas antes de aplicar descuentos.
+	measure 'Importe Bruto' = SUM('bi_ferreteria fact_ventas'[importe_bruto])
+		formatString: S/ #,##0.00
+		displayFolder: 01 Indicadores base
+		lineageTag: d8ae1b7f-b67b-4fbd-8b13-4aaa5c23e70f
+
+	/// Costo total asociado a las unidades vendidas.
+	measure 'Costo Total' = SUM('bi_ferreteria fact_ventas'[costo_total])
+		formatString: S/ #,##0.00
+		displayFolder: 01 Indicadores base
+		lineageTag: 55deb398-2880-4858-b2c4-34973c4c5812
+
+	/// Utilidad total generada por las ventas.
+	measure 'Utilidad Total' = SUM('bi_ferreteria fact_ventas'[utilidad])
+		formatString: S/ #,##0.00
+		displayFolder: 01 Indicadores base
+		lineageTag: 5440b9cf-8f5f-4672-aa1d-003690de3712
+
+	/// Monto total descontado en las ventas.
+	measure 'Descuento Total' = SUM('bi_ferreteria fact_ventas'[descuento_monto])
+		formatString: S/ #,##0.00
+		displayFolder: 01 Indicadores base
+		lineageTag: b687d3e6-3837-4903-ab35-7345aa91fd41
+
+	/// Cantidad total de unidades vendidas.
+	measure 'Unidades Vendidas' = SUM('bi_ferreteria fact_ventas'[cantidad])
+		formatString: #,##0
+		displayFolder: 01 Indicadores base
+		lineageTag: f7ebd1ed-894a-4385-8eb0-18f0e0dc64af
+
+	/// Número de transacciones de venta distintas.
+	measure 'Número de Ventas' = DISTINCTCOUNT('bi_ferreteria fact_ventas'[venta_id])
+		formatString: #,##0
+		displayFolder: 01 Indicadores base
+		lineageTag: 4df7975a-990c-41e5-9dac-5108fc5f44eb
+
+	/// Venta neta promedio por transacción.
+	measure 'Ticket Promedio' = DIVIDE([Ventas Netas], [Número de Ventas], 0)
+		formatString: S/ #,##0.00
+		displayFolder: 02 Ratios
+		lineageTag: 929e39bf-5996-4bec-a3c7-f5d2837d47e7
+
+	/// Porcentaje de utilidad respecto de las ventas netas.
+	measure 'Margen %' = DIVIDE([Utilidad Total], [Ventas Netas], 0)
+		formatString: 0.00%
+		displayFolder: 02 Ratios
+		lineageTag: b602d37d-17d5-4aa7-b04c-10316a21efbc
+
+	/// Porcentaje descontado respecto del importe bruto.
+	measure 'Descuento %' = DIVIDE([Descuento Total], [Importe Bruto], 0)
+		formatString: 0.00%
+		displayFolder: 02 Ratios
+		lineageTag: 8d56a5bc-61ed-4bcf-b590-0aec57945564
+
+	/// Ventas netas del mismo período del año anterior.
+	measure 'Ventas Año Anterior' =
+			CALCULATE(
+			    [Ventas Netas],
+			    SAMEPERIODLASTYEAR('bi_ferreteria dim_fecha'[fecha_key])
+			)
+		formatString: S/ #,##0.00
+		displayFolder: 03 Inteligencia de tiempo
+		lineageTag: eb54d6be-861e-4267-8b93-621eb1f3d262
+
+	/// Diferencia entre las ventas netas actuales y las del año anterior.
+	measure 'Variación Ventas' = [Ventas Netas] - [Ventas Año Anterior]
+		formatString: S/ #,##0.00
+		displayFolder: 03 Inteligencia de tiempo
+		lineageTag: 7839d94a-84c4-4989-98a9-ff728941281b
+
+	/// Variación porcentual de ventas respecto del año anterior.
+	measure 'Crecimiento Ventas %' =
+			DIVIDE(
+			    [Variación Ventas],
+			    [Ventas Año Anterior]
+			)
+		formatString: 0.00%
+		displayFolder: 03 Inteligencia de tiempo
+		lineageTag: 1305c5dd-19bd-41b2-8117-20399c646c6b
+
+	/// Utilidad total del mismo período del año anterior.
+	measure 'Utilidad Año Anterior' =
+			CALCULATE(
+			    [Utilidad Total],
+			    SAMEPERIODLASTYEAR('bi_ferreteria dim_fecha'[fecha_key])
+			)
+		formatString: S/ #,##0.00
+		displayFolder: 03 Inteligencia de tiempo
+		lineageTag: 67873fe1-84f7-4ff9-a31a-c3bda8ca9388
+
+	/// Diferencia entre la utilidad actual y la del año anterior.
+	measure 'Variación Utilidad' = [Utilidad Total] - [Utilidad Año Anterior]
+		formatString: S/ #,##0.00
+		displayFolder: 03 Inteligencia de tiempo
+		lineageTag: 947e162d-a8c1-4d39-8d6b-e648680c8ba5
+
+	/// Variación porcentual de utilidad respecto del año anterior.
+	measure 'Crecimiento Utilidad %' =
+			DIVIDE(
+			    [Variación Utilidad],
+			    [Utilidad Año Anterior]
+			)
+		formatString: 0.00%
+		displayFolder: 03 Inteligencia de tiempo
+		lineageTag: 8a154679-59a2-4fef-b36f-8a06b0fd4c07
+
+	/// Ventas netas acumuladas desde el inicio del año.
+	measure 'Ventas YTD' =
+			TOTALYTD(
+			    [Ventas Netas],
+			    'bi_ferreteria dim_fecha'[fecha_key]
+			)
+		formatString: S/ #,##0.00
+		displayFolder: 03 Inteligencia de tiempo
+		lineageTag: dfaaac03-9358-430b-8b18-c5ff97d86f08
+
+	/// Utilidad total acumulada desde el inicio del año.
+	measure 'Utilidad YTD' =
+			TOTALYTD(
+			    [Utilidad Total],
+			    'bi_ferreteria dim_fecha'[fecha_key]
+			)
+		formatString: S/ #,##0.00
+		displayFolder: 03 Inteligencia de tiempo
+		lineageTag: 30e4bb6a-f7bc-4ce7-9dd6-7071019e060c
+
+	column venta_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: e94465d1-cebe-42af-9e97-1e1c0c6760de
+		summarizeBy: sum
+		sourceColumn: venta_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column venta_id
+		dataType: string
+		lineageTag: af52b5d6-159b-4735-a4e3-8a544ad1edb6
+		summarizeBy: none
+		sourceColumn: venta_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_key
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: 9e567e11-2bc2-4dcb-9488-2893d3007cf5
+		summarizeBy: none
+		sourceColumn: fecha_key
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column hora
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: 127da7f0-65e2-498d-937b-9b080b81c072
+		summarizeBy: none
+		sourceColumn: hora
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column cliente_id
+		dataType: string
+		isHidden
+		lineageTag: f7b4ddef-c625-4dc4-ae53-2af012dd35c8
+		summarizeBy: none
+		sourceColumn: cliente_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column producto_id
+		dataType: string
+		isHidden
+		lineageTag: 93d5a5ff-a4f5-4940-b91f-77591dc3d98f
+		summarizeBy: none
+		sourceColumn: producto_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column vendedor_id
+		dataType: string
+		isHidden
+		lineageTag: 26fa9432-d3ef-46c1-a125-0f94f16d760a
+		summarizeBy: none
+		sourceColumn: vendedor_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column sucursal_id
+		dataType: string
+		isHidden
+		lineageTag: d248518d-55e1-44db-b844-6ed70e126e37
+		summarizeBy: none
+		sourceColumn: sucursal_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column canal_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 0d8ac4fb-8499-4972-b0d0-62ed5adf1d82
+		summarizeBy: none
+		sourceColumn: canal_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column cantidad
+		dataType: int64
+		formatString: 0
+		lineageTag: 0de96d42-99ae-4789-91e2-8556a87f6b19
+		summarizeBy: sum
+		sourceColumn: cantidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column precio_unitario
+		dataType: double
+		lineageTag: d7ae3942-e9dd-4482-aad9-cd977ea651af
+		summarizeBy: sum
+		sourceColumn: precio_unitario
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column descuento_pct
+		dataType: double
+		lineageTag: 9d4114f3-0d6b-4d71-b299-fa511f198bf4
+		summarizeBy: sum
+		sourceColumn: descuento_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column importe_bruto
+		dataType: double
+		lineageTag: 2de35c1e-cfcf-4e46-a7b5-5e688916d4d5
+		summarizeBy: sum
+		sourceColumn: importe_bruto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column descuento_monto
+		dataType: double
+		lineageTag: 1e025712-ed26-4ae3-a839-8c67ae344b60
+		summarizeBy: sum
+		sourceColumn: descuento_monto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column venta_neta
+		dataType: double
+		lineageTag: b4dd3a09-185a-4db7-8a61-c203b07a24e6
+		summarizeBy: sum
+		sourceColumn: venta_neta
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column costo_unitario
+		dataType: double
+		lineageTag: 587b4c64-aa9b-4a8d-8c13-224340c87731
+		summarizeBy: sum
+		sourceColumn: costo_unitario
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column costo_total
+		dataType: double
+		lineageTag: c5d168cc-d336-4009-a82c-8d172e2afaac
+		summarizeBy: sum
+		sourceColumn: costo_total
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column utilidad
+		dataType: double
+		lineageTag: 4f09b528-82ad-44b1-afac-fe0b2ee8b21e
+		summarizeBy: sum
+		sourceColumn: utilidad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column margen_pct
+		dataType: double
+		lineageTag: e4915f42-95e7-4948-951a-acd2dc74f5c6
+		summarizeBy: sum
+		sourceColumn: margen_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'bi_ferreteria fact_ventas' = m
+		mode: import
+		source =
+				let
+				  Origen = PostgreSQL.Database("localhost:5432", "sales_powerbi"),
+				  #"Navegación 1" = Origen{[Schema = "bi_ferreteria", Item = "fact_ventas"]}[Data],
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Navegación 1",{{"fecha_key", type date}, {"hora", type time}})
+				in
+				  #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

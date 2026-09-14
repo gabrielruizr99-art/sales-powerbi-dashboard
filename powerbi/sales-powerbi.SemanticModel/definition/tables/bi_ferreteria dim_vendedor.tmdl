@@ -1,0 +1,31 @@
+table 'bi_ferreteria dim_vendedor'
+	lineageTag: 149fbe46-b7f2-4d04-887d-43c5dc1b2357
+
+	column vendedor_id
+		dataType: string
+		isHidden
+		lineageTag: c69154c5-3974-4ca3-a891-54f0d565d31f
+		summarizeBy: none
+		sourceColumn: vendedor_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column vendedor
+		dataType: string
+		lineageTag: 249b5513-52c4-4815-8253-884b53942d3e
+		summarizeBy: none
+		sourceColumn: vendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'bi_ferreteria dim_vendedor' = m
+		mode: import
+		source =
+				let
+				  Origen = PostgreSQL.Database("localhost:5432", "sales_powerbi"),
+				  #"Navegación 1" = Origen{[Schema = "bi_ferreteria", Item = "dim_vendedor"]}[Data]
+				in
+				  #"Navegación 1"
+
+	annotation PBI_ResultType = Table
+

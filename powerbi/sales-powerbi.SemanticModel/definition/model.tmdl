@@ -1,0 +1,25 @@
+model Model
+	culture: es-MX
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-PE
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_ProTooling = ["DevMode","MCP-PBIModeling"]
+
+annotation PBI_QueryOrder = ["bi_ferreteria dim_canal","bi_ferreteria dim_cliente","bi_ferreteria dim_fecha","bi_ferreteria dim_producto","bi_ferreteria dim_sucursal","bi_ferreteria dim_vendedor","bi_ferreteria fact_ventas"]
+
+ref table 'bi_ferreteria dim_canal'
+ref table 'bi_ferreteria dim_cliente'
+ref table 'bi_ferreteria dim_fecha'
+ref table 'bi_ferreteria dim_producto'
+ref table 'bi_ferreteria dim_sucursal'
+ref table 'bi_ferreteria dim_vendedor'
+ref table 'bi_ferreteria fact_ventas'
+
+ref cultureInfo es-MX
+

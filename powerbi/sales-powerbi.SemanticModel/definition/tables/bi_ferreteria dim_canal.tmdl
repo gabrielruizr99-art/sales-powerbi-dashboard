@@ -1,0 +1,42 @@
+table 'bi_ferreteria dim_canal'
+	lineageTag: d0a5e746-09da-4a21-a740-5594b8433073
+
+	column canal_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 624de8b9-4f30-45b8-82bf-ed88ecde1fc5
+		summarizeBy: none
+		sourceColumn: canal_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column canal_venta
+		dataType: string
+		lineageTag: a366512e-b1d7-4332-b697-4ea9cb085856
+		summarizeBy: none
+		sourceColumn: canal_venta
+
+		annotation SummarizationSetBy = Automatic
+
+	column medio_pago
+		dataType: string
+		lineageTag: 5f6cc2d3-4cb7-45fb-a91e-28c4443160fa
+		summarizeBy: none
+		sourceColumn: medio_pago
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'bi_ferreteria dim_canal' = m
+		mode: import
+		source =
+				let
+				  Origen = PostgreSQL.Database("localhost:5432", "sales_powerbi"),
+				  #"Navegación 1" = Origen{[Schema = "bi_ferreteria", Item = "dim_canal"]}[Data]
+				in
+				  #"Navegación 1"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+
