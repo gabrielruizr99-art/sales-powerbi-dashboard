@@ -3,31 +3,31 @@ table 'bi_ferreteria fact_ventas'
 
 	/// Importe neto total de las ventas después de descuentos.
 	measure 'Ventas Netas' = SUM('bi_ferreteria fact_ventas'[venta_neta])
-		formatString: S/ #,##0.00
+		formatString: "S/" #,##0.00
 		displayFolder: 01 Indicadores base
 		lineageTag: 988848b5-cfd3-486b-87cb-fe629cad2888
 
 	/// Importe total de ventas antes de aplicar descuentos.
 	measure 'Importe Bruto' = SUM('bi_ferreteria fact_ventas'[importe_bruto])
-		formatString: S/ #,##0.00
+		formatString: "S/" #,##0.00
 		displayFolder: 01 Indicadores base
 		lineageTag: d8ae1b7f-b67b-4fbd-8b13-4aaa5c23e70f
 
 	/// Costo total asociado a las unidades vendidas.
 	measure 'Costo Total' = SUM('bi_ferreteria fact_ventas'[costo_total])
-		formatString: S/ #,##0.00
+		formatString: "S/" #,##0.00
 		displayFolder: 01 Indicadores base
 		lineageTag: 55deb398-2880-4858-b2c4-34973c4c5812
 
 	/// Utilidad total generada por las ventas.
 	measure 'Utilidad Total' = SUM('bi_ferreteria fact_ventas'[utilidad])
-		formatString: S/ #,##0.00
+		formatString: "S/" #,##0.00
 		displayFolder: 01 Indicadores base
 		lineageTag: 5440b9cf-8f5f-4672-aa1d-003690de3712
 
 	/// Monto total descontado en las ventas.
 	measure 'Descuento Total' = SUM('bi_ferreteria fact_ventas'[descuento_monto])
-		formatString: S/ #,##0.00
+		formatString: "S/" #,##0.00
 		displayFolder: 01 Indicadores base
 		lineageTag: b687d3e6-3837-4903-ab35-7345aa91fd41
 
@@ -45,7 +45,7 @@ table 'bi_ferreteria fact_ventas'
 
 	/// Venta neta promedio por transacción.
 	measure 'Ticket Promedio' = DIVIDE([Ventas Netas], [Número de Ventas], 0)
-		formatString: S/ #,##0.00
+		formatString: "S/" #,##0.00
 		displayFolder: 02 Ratios
 		lineageTag: 929e39bf-5996-4bec-a3c7-f5d2837d47e7
 
@@ -67,13 +67,13 @@ table 'bi_ferreteria fact_ventas'
 			    [Ventas Netas],
 			    SAMEPERIODLASTYEAR('bi_ferreteria dim_fecha'[fecha_key])
 			)
-		formatString: S/ #,##0.00
+		formatString: "S/" #,##0.00
 		displayFolder: 03 Inteligencia de tiempo
 		lineageTag: eb54d6be-861e-4267-8b93-621eb1f3d262
 
 	/// Diferencia entre las ventas netas actuales y las del año anterior.
 	measure 'Variación Ventas' = [Ventas Netas] - [Ventas Año Anterior]
-		formatString: S/ #,##0.00
+		formatString: "S/" #,##0.00
 		displayFolder: 03 Inteligencia de tiempo
 		lineageTag: 7839d94a-84c4-4989-98a9-ff728941281b
 
@@ -93,13 +93,13 @@ table 'bi_ferreteria fact_ventas'
 			    [Utilidad Total],
 			    SAMEPERIODLASTYEAR('bi_ferreteria dim_fecha'[fecha_key])
 			)
-		formatString: S/ #,##0.00
+		formatString: "S/" #,##0.00
 		displayFolder: 03 Inteligencia de tiempo
 		lineageTag: 67873fe1-84f7-4ff9-a31a-c3bda8ca9388
 
 	/// Diferencia entre la utilidad actual y la del año anterior.
 	measure 'Variación Utilidad' = [Utilidad Total] - [Utilidad Año Anterior]
-		formatString: S/ #,##0.00
+		formatString: "S/" #,##0.00
 		displayFolder: 03 Inteligencia de tiempo
 		lineageTag: 947e162d-a8c1-4d39-8d6b-e648680c8ba5
 
@@ -119,7 +119,7 @@ table 'bi_ferreteria fact_ventas'
 			    [Ventas Netas],
 			    'bi_ferreteria dim_fecha'[fecha_key]
 			)
-		formatString: S/ #,##0.00
+		formatString: "S/" #,##0.00
 		displayFolder: 03 Inteligencia de tiempo
 		lineageTag: dfaaac03-9358-430b-8b18-c5ff97d86f08
 
@@ -129,7 +129,7 @@ table 'bi_ferreteria fact_ventas'
 			    [Utilidad Total],
 			    'bi_ferreteria dim_fecha'[fecha_key]
 			)
-		formatString: S/ #,##0.00
+		formatString: "S/" #,##0.00
 		displayFolder: 03 Inteligencia de tiempo
 		lineageTag: 30e4bb6a-f7bc-4ce7-9dd6-7071019e060c
 
